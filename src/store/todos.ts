@@ -53,4 +53,4 @@ class ToDo implements ToDo {
 }
 
 
-const store: Array<ToDo> = [];
+export const store: Array<ToDo> = [];
