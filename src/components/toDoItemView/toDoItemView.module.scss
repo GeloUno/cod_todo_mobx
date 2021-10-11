@@ -9,7 +9,7 @@ $widthStatus:50px;
 }
 .todo{
   display: flex;
-  background-color: green;
+  background-color: hsl(142, 71%, 35%);
   width: $widthStatus;
   border-top-left-radius:$radiusHeight;
   border-bottom-left-radius: $radiusHeight;
@@ -17,7 +17,7 @@ $widthStatus:50px;
 }
 .done{
   display: flex;
-  background-color: red;
+  background-color: hsl(0, 84%, 50%);
   width: $widthStatus;  
   border-top-left-radius: $radiusHeight;
   border-bottom-left-radius: $radiusHeight;
