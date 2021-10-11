@@ -1,0 +1,38 @@
+$radiusHeight:10px;
+
+.content{ 
+  border-radius: $radiusHeight; 
+  background-color: hsl(85, 85%, 35%);
+  margin: 10px;
+  border-radius: $radiusHeight; 
+box-shadow: 5px 5px 20px hsla(30, 0%, 10%, 0.5)
+}
+
+.body{
+display: flex;
+flex-direction: column;
+margin: 0px;
+
+}
+
+.section{
+  padding: 10px 20px;
+
+  display: flex;
+flex-direction: column;
+}
+
+.input{
+padding: 10px;
+border-radius: 5px;
+border-width: 0;
+border: 0;
+font-size: medium;
+}
+.input:focus{
+  border-width: 0;
+  border: 0;
+  outline: none;
+}
+
+
