@@ -1,0 +1,30 @@
+$radiusHeight:10px;
+$widthStatus:50px;
+.content{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;  
+  border-radius: $radiusHeight; 
+  box-shadow: 5px 5px 10px hsla(30, 0%, 10%, 0.5)
+}
+.todo{
+  display: flex;
+  background-color: green;
+  width: $widthStatus;
+  border-top-left-radius:$radiusHeight;
+  border-bottom-left-radius: $radiusHeight;
+ 
+}
+.done{
+  display: flex;
+  background-color: red;
+  width: $widthStatus;  
+  border-top-left-radius: $radiusHeight;
+  border-bottom-left-radius: $radiusHeight;
+}
+
+.body{
+  padding: 20px;
+}
+
+

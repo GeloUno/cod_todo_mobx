@@ -1,56 +1,63 @@
 
-import { action, computed, makeAutoObservable, makeObservable, observable } from 'mobx'
+import { makeAutoObservable } from 'mobx'
 // import { observer } from 'mobx-react-lite'
 import { nanoid } from 'nanoid'
 
-
-interface ToDo {
-    id: string,
-    title: string,
-    description: string,
+export interface IToDo {
+    id: string;
+    title: string;
+    description: string;
     done: boolean
 }
 
-class ToDo implements ToDo {
+export class ToDo {
     id: string;
     title: string;
     description: string;
     done: boolean
 
-    private constructor({ title, description, done }: ToDo) {
-        makeAutoObservable(this,
-            //      {
-            //     done: observable,
-            //     getTodo: computed
-            // }
-        )
-        this.id = nanoid();
+    constructor({ title, description, done, id }: { title: string, description: string, done: boolean, id: string }) {
+        makeAutoObservable(this);
+        this.id = id;
         this.title = title;
         this.description = description;
         this.done = done
     }
 
-    // public get getTodo(): Omit<ToDo, "getTodo" | "AddTodo" | "toggleDoneTodo"> {
-    //     return {
-    //         title: this.title,
-    //         description: this.description,
-    //         id: this.id,
-    //         done: this.done,
-    //     }
-    // }
-
-    // public set AddTodo(todo: ToDo) {
-    //     this.title = todo.title;
-    //     this.description = todo.description;
-    //     this.done = todo.done;
-    //     this.id = this.id
-    // }
-
-
     public toggleDoneTodo() {
-        this.done = !this.done;
+        this.done = false
+    }
+}
+
+export class ToDoList {
+    list: Array<ToDo> = []
+    constructor(list: Array<ToDo>) {
+        makeAutoObservable(this);
+        this.list = list;
+    }
+    addToDo(todo: ToDo) {
+        this.list.push(todo)
+        // console.log(`list`, this.list)
+    }
+    toggleDone(id: string) {
+        this.list.find(li => {
+            if (li.id === id) {
+                li.done = !li.done
+            }
+        })
+
     }
 }
 
 
-export const store: Array<ToDo> = [];
+export const storeList: Array<ToDo> = [
+    new ToDo({ description: 'example1', done: false, title: 'some1', id: nanoid() }),
+    new ToDo({ description: 'example2', done: true, title: 'some2', id: nanoid() }),
+]
+// observable({ store })
+
+export const mystore: ToDoList = new ToDoList(storeList)
+// export const store = observable(store1)
+
+
+
