@@ -1,14 +1,13 @@
 import React from 'react';
 import styles from './button.module.css';
 interface IButtonProps {
-  // label: string;
   variant: 'primary' | 'danger';
-  // disable: boolean;
+  disable?: boolean;
   children: React.ReactNode;
-  onClick(): void;
+  onClick?(): void;
 }
 
-function Button({ children, variant, onClick }: IButtonProps) {
+function Button({ children, variant, disable, onClick }: IButtonProps) {
   let styleVariant;
   switch (variant) {
     case 'danger':
@@ -20,6 +19,9 @@ function Button({ children, variant, onClick }: IButtonProps) {
 
     // default:
     //   break;
+  }
+  if (!onClick) {
+    <button className={`${styles.btn} ${styleVariant}`}>{children}</button>;
   }
 
   return (
