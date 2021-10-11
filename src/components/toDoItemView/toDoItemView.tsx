@@ -6,8 +6,8 @@ import Button from '../button/button';
 
 const ToDoItemView = observer(
   ({ description, done, id, title, toggleDoneTodo }: ToDo) => {
-    const stylesBoxState = done ? styles.todoBox : styles.doneBox;
-    const stylesTextState = done ? styles.todoText : styles.doneText;
+    const stylesBoxState = done ? styles.doneBox : styles.todoBox;
+    const stylesTextState = done ? styles.doneText : styles.todoText;
     return (
       <div className={styles.content}>
         <div className={stylesBoxState}></div>
