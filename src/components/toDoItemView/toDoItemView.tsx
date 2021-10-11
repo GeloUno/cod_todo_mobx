@@ -6,16 +6,17 @@ import Button from '../button/button';
 
 const ToDoItemView = observer(
   ({ description, done, id, title, toggleDoneTodo }: ToDo) => {
-    const stylesState = done ? styles.todo : styles.done;
+    const stylesBoxState = done ? styles.todoBox : styles.doneBox;
+    const stylesTextState = done ? styles.todoText : styles.doneText;
     return (
       <div className={styles.content}>
-        <div className={stylesState}></div>
+        <div className={stylesBoxState}></div>
         <div className={styles.body}>
           <div>
-            <h4>{title}</h4>
+            <h4 className={`${stylesTextState}`}>{title}</h4>
           </div>
           <div>
-            <p>{description}</p>
+            <p className={`${stylesTextState}`}>{description}</p>
           </div>
           <Button onClick={toggleDoneTodo} variant="primary">
             toggle Done

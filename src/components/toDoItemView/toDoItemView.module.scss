@@ -4,10 +4,11 @@ $widthStatus:50px;
   display: flex;
   flex-direction: row;
   margin: 10px;  
+ 
   border-radius: $radiusHeight; 
-  box-shadow: 5px 5px 10px hsla(30, 0%, 10%, 0.5)
+  box-shadow: 5px 5px 20px hsla(30, 0%, 10%, 0.5)
 }
-.todo{
+.todoBox{
   display: flex;
   background-color: hsl(142, 71%, 35%);
   width: $widthStatus;
@@ -15,7 +16,7 @@ $widthStatus:50px;
   border-bottom-left-radius: $radiusHeight;
  
 }
-.done{
+.doneBox{
   display: flex;
   background-color: hsl(0, 84%, 50%);
   width: $widthStatus;  
@@ -24,7 +25,15 @@ $widthStatus:50px;
 }
 
 .body{
-  padding: 20px;
+  padding: 20px;  
+}
+.todoText{
+
+}
+.doneText{
+ color:hsl(220, 10%, 45%) ;
+ font-style: italic;
+ text-decoration: line-through;
 }
 
 
