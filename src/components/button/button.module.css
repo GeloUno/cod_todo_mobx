@@ -1,0 +1,28 @@
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: medium;
+}
+
+.btnPrimary {
+  background-color: blue;
+  color: white;
+}
+
+.btnDanger {
+  background-color: red;
+  color: white;
+}
+
+.btnDanger:hover {
+  background-color: #cc0000;
+}
+
+.btnPrimary:hover {
+  background-color: #0000cc;
+}
+/*# sourceMappingURL=button.module.css.map */
