@@ -9,20 +9,20 @@
 }
 
 .btnPrimary {
-  background-color: blue;
+  background-color: #0b64f4;
   color: white;
 }
 
 .btnDanger {
-  background-color: red;
+  background-color: #eb1414;
   color: white;
 }
 
 .btnDanger:hover {
-  background-color: #cc0000;
+  background-color: #bc1010;
 }
 
 .btnPrimary:hover {
-  background-color: #0000cc;
+  background-color: #0950c3;
 }
 /*# sourceMappingURL=button.module.css.map */
