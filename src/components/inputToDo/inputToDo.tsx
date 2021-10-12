@@ -1,13 +1,15 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import Button from '../button/button';
-import styles from './form.module.css';
+import styles from './inputToDo.module.css';
 import { observer } from 'mobx-react-lite';
 import { ToDo, ToDoList } from '../../store/todos';
 import { nanoid } from 'nanoid';
 
-const Form = observer(({ store }: { store: ToDoList }) => {
+const InputToDo = observer(({ store }: { store: ToDoList }) => {
   const titleInputRef = useRef<HTMLInputElement>(null);
   const descriptionInputRef = useRef<HTMLInputElement>(null);
+  const deadlineInputRef = useRef<HTMLInputElement>(null);
+
   const formRef = useRef<HTMLFormElement>(null);
 
   function cleanFormHandler() {
@@ -18,13 +20,16 @@ const Form = observer(({ store }: { store: ToDoList }) => {
     event.preventDefault();
     const titleData = titleInputRef.current?.value;
     const descriptionData = descriptionInputRef.current?.value;
-    if (titleData && descriptionData) {
+    const deadlineDate = deadlineInputRef.current?.value;
+    if (titleData && descriptionData && deadlineDate) {
+      console.log(`deadlineDate`, deadlineDate);
       store.addToDo(
         new ToDo({
           title: titleData,
           description: descriptionData,
           done: false,
           id: nanoid(),
+          deadline: new Date(deadlineDate),
         })
       );
       cleanFormHandler();
@@ -39,7 +44,7 @@ const Form = observer(({ store }: { store: ToDoList }) => {
       >
         <div className={styles.section}>
           <label htmlFor="title">
-            <h4>title:</h4>
+            <h4 className={styles.label}>title:</h4>
           </label>
           <input
             type="text"
@@ -50,12 +55,23 @@ const Form = observer(({ store }: { store: ToDoList }) => {
         </div>
         <div className={styles.section}>
           <label htmlFor="description">
-            <h4>description:</h4>
+            <h4 className={styles.label}>description:</h4>
           </label>
           <input
             type="text"
             id="description"
             ref={descriptionInputRef}
+            className={styles.input}
+          />
+        </div>
+        <div className={styles.section}>
+          <label htmlFor="deadline">
+            <h4 className={styles.label}>deadline:</h4>
+          </label>
+          <input
+            type="date"
+            id="deadline"
+            ref={deadlineInputRef}
             className={styles.input}
           />
         </div>
@@ -72,4 +88,4 @@ const Form = observer(({ store }: { store: ToDoList }) => {
   );
 });
 
-export default Form;
+export default InputToDo;

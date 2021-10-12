@@ -42,4 +42,12 @@
   border: 0;
   outline: none;
 }
-/*# sourceMappingURL=form.module.css.map */
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=inputToDo.module.css.map */
