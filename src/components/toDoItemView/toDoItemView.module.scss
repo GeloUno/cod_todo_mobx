@@ -22,18 +22,24 @@ $widthStatus:50px;
   width: $widthStatus;  
   border-top-left-radius: $radiusHeight;
   border-bottom-left-radius: $radiusHeight;
+  
 }
 
 .body{
   padding: 20px;  
+  
 }
 .todoText{
-
+  word-wrap: break-word;
+  max-width: 270px;
 }
 .doneText{
  color:hsl(220, 10%, 45%) ;
+ word-wrap: break-word;
+  max-width: 270px;
  font-style: italic;
  text-decoration: line-through;
+ word-wrap: break-word;
 }
 
 

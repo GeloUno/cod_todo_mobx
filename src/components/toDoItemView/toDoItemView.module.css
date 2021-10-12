@@ -36,9 +36,17 @@
   padding: 20px;
 }
 
+.todoText {
+  word-wrap: break-word;
+  max-width: 270px;
+}
+
 .doneText {
   color: #676f7e;
+  word-wrap: break-word;
+  max-width: 270px;
   font-style: italic;
   text-decoration: line-through;
+  word-wrap: break-word;
 }
-/*# sourceMappingURL=ToDoItemView.module.css.map */
+/*# sourceMappingURL=toDoItemView.module.css.map */
