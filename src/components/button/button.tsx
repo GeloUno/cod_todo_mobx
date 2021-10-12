@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './button.module.css';
 interface IButtonProps {
-  variant: 'primary' | 'danger';
+  variant: 'primary' | 'danger' | 'secondary';
   disable?: boolean;
   children: React.ReactNode;
   onClick?(): void;
@@ -15,6 +15,9 @@ function Button({ children, variant, disable, onClick }: IButtonProps) {
       break;
     case 'primary':
       styleVariant = styles.btnPrimary;
+      break;
+    case 'secondary':
+      styleVariant = styles.btnSecondary;
       break;
 
     // default:

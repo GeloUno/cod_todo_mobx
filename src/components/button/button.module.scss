@@ -12,16 +12,23 @@ font-size: medium;
   background-color: hsl(217, 91%, 50%);
   color: white;
 }
+.btnPrimary:hover{
+  background-color:hsl(217, 91%, 40%);
+}
 
 .btnDanger{
   background-color: hsl(0, 84%, 50%);
-  color: white;
-
+  color: white;  
 }
 .btnDanger:hover{
   background-color: hsl(0, 84%, 40%);
 }
 
-.btnPrimary:hover{
-  background-color:hsl(217, 91%, 40%);
+.btnSecondary{
+  background-color: hsl(115, 84%, 40%);
+  color: white;
+  
+}
+.btnSecondary:hover{
+  background-color: hsl(115, 84%, 30%);
 }

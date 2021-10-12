@@ -13,6 +13,10 @@
   color: white;
 }
 
+.btnPrimary:hover {
+  background-color: #0950c3;
+}
+
 .btnDanger {
   background-color: #eb1414;
   color: white;
@@ -22,7 +26,12 @@
   background-color: #bc1010;
 }
 
-.btnPrimary:hover {
-  background-color: #0950c3;
+.btnSecondary {
+  background-color: #1fbc10;
+  color: white;
+}
+
+.btnSecondary:hover {
+  background-color: #178d0c;
 }
 /*# sourceMappingURL=button.module.css.map */
