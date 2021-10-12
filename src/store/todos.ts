@@ -55,6 +55,7 @@ export class ToDoList {
     }
     addToDo(todo: ToDo) {
         this.listToDo.push(todo)
+        console.log(`ADD listToDo`, this.listToDo)
     }
     toggleDone(id: string) {
         this.listToDo.forEach(li => {
@@ -77,11 +78,24 @@ export class ToDoList {
         this.listToDo = data
     }
     toggleShowOnEditForm(id: string) {
-        this.listToDo.forEach(li => {
-            if (li.id === id) {
-                li.showAsEditForm = !li.showAsEditForm
+        this.listToDo.forEach(item => {
+            if (item.id === id) {
+                item.showAsEditForm = !item.showAsEditForm
             }
         })
+    }
+    saveEditedToDo(todo: ToDo) {
+        this.listToDo.forEach(item => {
+            console.log("<- LOG -> file: todos.ts -> line 90 -> ToDoList -> saveEditedToDo -> item.id", item.id)
+            if (item.id === todo.id) {
+
+                item.showAsEditForm = false;
+                item.title = todo.title;
+                item.description = todo.description
+                item.deadline = todo.deadline
+            }
+        })
+        console.log(`SAVE listToDo`, this.listToDo)
     }
 }
 

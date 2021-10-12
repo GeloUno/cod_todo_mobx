@@ -8,7 +8,7 @@ const ToDolist = observer(({ store }: { store: ToDoList }) => {
     <div>
       {store.listToDo.map((li) => {
         if (li.showAsEditForm) {
-          return <InputToDo store={store} />;
+          return <InputToDo store={store} toDoId={li.id} key={li.id} />;
         } else {
           return (
             <ToDoItemView
