@@ -9,10 +9,10 @@ function Layout() {
   return (
     <div className={styles.container}>
       <div className={styles.body}>
-        <div style={{ width: '450px' }}>
+        <div className={styles.section}>
           <ToDoDetailSwitch store={mystore} />
         </div>
-        <div style={{ width: '450px' }}>
+        <div className={styles.section}>
           <InputToDo store={mystore} />
           <ToDolist store={mystore} />
         </div>

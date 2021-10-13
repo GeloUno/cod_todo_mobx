@@ -43,8 +43,6 @@ const InputToDo = observer(
       const descriptionData = descriptionInputRef.current?.value;
       const deadlineDate = deadlineInputRef.current?.value;
       if (titleData && descriptionData && deadlineDate) {
-        console.log(`deadlineDate`, deadlineDate);
-
         const dataToSave = new ToDo({
           title: titleData,
           description: descriptionData,

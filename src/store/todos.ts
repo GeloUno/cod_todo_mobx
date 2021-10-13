@@ -54,7 +54,6 @@ export class ToDoList {
     }
     addToDo(todo: ToDo) {
         this.listToDo.push(todo)
-        console.log(`ADD listToDo`, this.listToDo)
     }
     toggleDone(id: string) {
         this.listToDo.forEach(li => {
@@ -64,9 +63,7 @@ export class ToDoList {
         })
     }
     setIdToDoDetailView(id: string) {
-        console.log(`id`, id)
         this.idToDoDetailView = id
-        console.log(`this.idToDoDetailView`, this.idToDoDetailView)
     }
 
     getToDoById(id: string): ToDo | undefined {
@@ -85,16 +82,14 @@ export class ToDoList {
     }
     saveEditedToDo(todo: ToDo) {
         this.listToDo.forEach(item => {
-            console.log("<- LOG -> file: todos.ts -> line 90 -> ToDoList -> saveEditedToDo -> item.id", item.id)
             if (item.id === todo.id) {
-
                 item.showAsEditForm = false;
                 item.title = todo.title;
                 item.description = todo.description
                 item.deadline = todo.deadline
             }
         })
-        console.log(`SAVE listToDo`, this.listToDo)
+
     }
 }
 

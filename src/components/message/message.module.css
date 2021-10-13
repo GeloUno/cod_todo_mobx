@@ -14,4 +14,8 @@
   -webkit-box-shadow: 5px 5px 20px rgba(26, 26, 26, 0.5);
           box-shadow: 5px 5px 20px rgba(26, 26, 26, 0.5);
 }
+
+.textBox {
+  padding: 10px;
+}
 /*# sourceMappingURL=message.module.css.map */
