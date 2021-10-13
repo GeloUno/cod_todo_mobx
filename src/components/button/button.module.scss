@@ -1,6 +1,6 @@
 .btn{
   margin: 5px;
-padding:  10px 20px ;
+padding:  10px 15px ;
 border-radius: 5px;
 border: 0;
 cursor: pointer;
@@ -24,11 +24,26 @@ font-size: medium;
   background-color: hsl(0, 84%, 40%);
 }
 
-.btnSecondary{
+.btnSuccess{
   background-color: hsl(115, 84%, 40%);
-  color: white;
-  
+  color: white;  
+}
+.btnSuccess:hover{
+  background-color: hsl(115, 84%, 30%);
+}
+
+.btnSecondary{
+  background-color: hsl(210, 5%, 50%);
+  color: white;  
 }
 .btnSecondary:hover{
-  background-color: hsl(115, 84%, 30%);
+  background-color: hsl(210, 5%, 40%);
+}
+
+.btnWarning{
+  background-color: hsl(45, 100%, 45%);
+  color: white;  
+}
+.btnWarning:hover{
+  background-color:  hsl(45, 100%, 35%);
 }

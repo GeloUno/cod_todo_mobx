@@ -1,6 +1,6 @@
 .btn {
   margin: 5px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
@@ -26,12 +26,30 @@
   background-color: #bc1010;
 }
 
-.btnSecondary {
+.btnSuccess {
   background-color: #1fbc10;
   color: white;
 }
 
-.btnSecondary:hover {
+.btnSuccess:hover {
   background-color: #178d0c;
+}
+
+.btnSecondary {
+  background-color: #798086;
+  color: white;
+}
+
+.btnSecondary:hover {
+  background-color: #61666b;
+}
+
+.btnWarning {
+  background-color: #e6ac00;
+  color: white;
+}
+
+.btnWarning:hover {
+  background-color: #b38600;
 }
 /*# sourceMappingURL=button.module.css.map */

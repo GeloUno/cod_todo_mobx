@@ -10,7 +10,7 @@ $widthStatus:50px;
 }
 .todoBox{
   display: flex;
-  background-color: hsl(142, 71%, 35%);
+  background-color: hsl(45, 100%, 45%);
   width: $widthStatus;
   border-top-left-radius:$radiusHeight;
   border-bottom-left-radius: $radiusHeight;
@@ -18,7 +18,7 @@ $widthStatus:50px;
 }
 .doneBox{
   display: flex;
-  background-color: hsl(0, 84%, 50%);
+  background-color: hsl(115, 84%, 40%);
   width: $widthStatus;  
   border-top-left-radius: $radiusHeight;
   border-bottom-left-radius: $radiusHeight;

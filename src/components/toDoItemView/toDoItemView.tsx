@@ -62,13 +62,21 @@ const ToDoItemView = observer(
             </div>
           )}
           {!isShowDetail && (
-            <Button onClick={setIdToDoDetailView} variant="secondary">
+            <Button onClick={setIdToDoDetailView} variant="primary">
               Show
             </Button>
           )}
           {!isShowDetail && (
-            <Button onClick={showInEditForm} variant="primary">
+            <Button onClick={showInEditForm} variant="secondary">
               Edit
+            </Button>
+          )}
+          {!isShowDetail && (
+            <Button
+              onClick={toggleDoneTodo}
+              variant={done ? `warning` : `success`}
+            >
+              {done ? `ToDo` : `Done`}
             </Button>
           )}
 
