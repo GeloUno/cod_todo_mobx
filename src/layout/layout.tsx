@@ -14,7 +14,7 @@ function Layout() {
         </div>
         <div className={styles.section}>
           <InputToDo store={mystore} />
-          <ToDolist store={mystore} />
+          <ToDolist store={mystore} isLoading={false} />
         </div>
       </div>
     </div>
