@@ -4,6 +4,7 @@ import styles from './inputToDo.module.css';
 import { observer } from 'mobx-react-lite';
 import { ToDo, ToDoList } from '../../store/todos';
 import { nanoid } from 'nanoid';
+import { convertDate } from '../../shared/converDate';
 
 const InputToDo = observer(
   ({ store, toDoId }: { store: ToDoList; toDoId?: string }) => {
@@ -24,14 +25,7 @@ const InputToDo = observer(
           descriptionInputRef.current.value = data.description;
         }
         if (data && data.deadline && deadlineInputRef.current) {
-          deadlineInputRef.current.value = data.deadline.toLocaleString(
-            'en-CA',
-            {
-              year: 'numeric',
-              day: '2-digit',
-              month: '2-digit',
-            }
-          );
+          deadlineInputRef.current.value = convertDate(data.deadline);
         }
       }
       return () => {
@@ -106,11 +100,7 @@ const InputToDo = observer(
               id="deadline"
               ref={deadlineInputRef}
               className={styles.input}
-              min={new Date().toLocaleString('en-CA', {
-                year: 'numeric',
-                day: '2-digit',
-                month: '2-digit',
-              })}
+              min={convertDate(new Date())}
             />
           </div>
           <div className={styles.section}>

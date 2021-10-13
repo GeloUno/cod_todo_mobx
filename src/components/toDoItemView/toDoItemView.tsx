@@ -3,7 +3,7 @@ import { ToDo } from '../../store/todos';
 import { observer } from 'mobx-react-lite';
 import styles from './toDoItemView.module.css';
 import Button from '../button/button';
-import Moment from 'react-moment';
+import { convertDate } from '../../shared/converDate';
 
 interface ToDoProps extends Omit<ToDo, 'showAsEditForm'> {
   isShowDetail: boolean;
@@ -44,20 +44,14 @@ const ToDoItemView = observer(
           {isShowDetail && (
             <div>
               <p className={`${stylesTextState}`}>
-                Created at:{' '}
-                <strong>
-                  <Moment format="YYYY-DD-MM">{dateCreate}</Moment>
-                </strong>
+                Created at: <strong>{convertDate(dateCreate)}</strong>
               </p>
             </div>
           )}
           {isShowDetail && (
             <div>
               <p className={`${stylesTextState}`}>
-                Deadline:{' '}
-                <strong>
-                  <Moment format="YYYY-DD-MM">{deadline}</Moment>
-                </strong>
+                Deadline: <strong>{convertDate(deadline)}</strong>
               </p>
             </div>
           )}
