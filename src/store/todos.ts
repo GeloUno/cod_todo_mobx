@@ -1,6 +1,5 @@
 
 import { makeAutoObservable } from 'mobx'
-// import { observer } from 'mobx-react-lite'
 import { nanoid } from 'nanoid'
 
 // export interface IToDo {
@@ -101,8 +100,8 @@ export class ToDoList {
 
 
 export const storeList: Array<ToDo> = [
-    new ToDo({ description: 'example1', done: false, title: 'some1', id: "1", deadline: new Date('2021-10-10') }),
-    new ToDo({ description: 'example2', done: true, title: 'some2', id: "2", deadline: new Date('2022-01-01') }),
+    new ToDo({ description: 'example1', done: false, title: 'some1', id: nanoid(), deadline: new Date('2021-10-10') }),
+    new ToDo({ description: 'example2', done: true, title: 'some2', id: nanoid(), deadline: new Date('2022-01-01') }),
 ]
 
 export const mystore: ToDoList = new ToDoList(storeList)

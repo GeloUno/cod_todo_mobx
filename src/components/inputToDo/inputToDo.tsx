@@ -23,16 +23,21 @@ const InputToDo = observer(
         if (data && data.description && descriptionInputRef.current) {
           descriptionInputRef.current.value = data.description;
         }
+        if (data && data.deadline && deadlineInputRef.current) {
+          deadlineInputRef.current.value = data.deadline.toLocaleString(
+            'en-CA',
+            {
+              year: 'numeric',
+              day: '2-digit',
+              month: '2-digit',
+            }
+          );
+        }
       }
       return () => {
         // cleanup
       };
-    }, [titleInputRef.current, descriptionInputRef.current]);
-
-    // if (data && data.deadline && deadlineInputRef.current) {
-    //   deadlineInputRef.current.value = data.deadline.toString();
-    // }
-    // }
+    });
 
     function cleanFormHandler() {
       formRef.current && formRef.current.reset();

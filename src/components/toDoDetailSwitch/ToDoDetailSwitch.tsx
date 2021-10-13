@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { ToDoList } from '../../store/todos';
 import ToDoItemView from '../toDoItemView/toDoItemView';
 import NoToDoDataMessage from '../noToDoDataMessage/noToDoDataMessage';
 
 const ToDoDetailSwitch = observer(({ store }: { store: ToDoList }) => {
-  console.log(`idToDoDetailView`, store.idToDoDetailView);
   if (store.idToDoDetailView) {
     const data = store.getToDoById(store.idToDoDetailView);
+
     if (data) {
-      console.log(`data`, data);
       return (
         <ToDoItemView
           dateCreate={data.dateCreate}
@@ -26,10 +25,14 @@ const ToDoDetailSwitch = observer(({ store }: { store: ToDoList }) => {
         />
       );
     }
-    return <NoToDoDataMessage message={`no to do found`} />;
+    return <NoToDoDataMessage message={`no ToDo found`} />;
   }
 
-  return <NoToDoDataMessage message={`no to do selsected`} />;
+  return (
+    <NoToDoDataMessage
+      message={`To see detail of todo press show button in to todo`}
+    />
+  );
 });
 
 export default ToDoDetailSwitch;
