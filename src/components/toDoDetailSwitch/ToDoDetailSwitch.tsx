@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { ToDoList } from '../../store/todos';
 import ToDoItemView from '../toDoItemView/toDoItemView';
-import NoToDoDataMessage from '../noToDoDataMessage/noToDoDataMessage';
+import Message from '../message/message';
 
 const ToDoDetailSwitch = observer(({ store }: { store: ToDoList }) => {
   if (store.idToDoDetailView) {
@@ -25,12 +25,12 @@ const ToDoDetailSwitch = observer(({ store }: { store: ToDoList }) => {
         />
       );
     }
-    return <NoToDoDataMessage message={`no ToDo found`} />;
+    return <Message message={`no ToDo found`} />;
   }
 
   return (
-    <NoToDoDataMessage
-      message={`To see detail of todo press show button in to todo`}
+    <Message
+      message={`To see detail of todo, press show button in item todo`}
     />
   );
 });

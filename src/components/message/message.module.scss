@@ -1,0 +1,13 @@
+$radiusHeight:10px;
+.content{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  border-radius: $radiusHeight; 
+  justify-content: center;
+  box-shadow: 5px 5px 20px hsla(30, 0%, 10%, 0.5)
+}
+
+.textBox{  
+  // padding: 20px;
+}
