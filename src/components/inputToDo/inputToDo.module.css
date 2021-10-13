@@ -1,6 +1,6 @@
 .content {
   border-radius: 10px;
-  background-color: #66a50d;
+  background-color: white;
   margin: 10px;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 20px rgba(26, 26, 26, 0.5);
@@ -32,15 +32,16 @@
 .input {
   padding: 10px;
   border-radius: 5px;
-  border-width: 0;
-  border: 0;
+  border-width: 0px;
   font-size: medium;
+  outline: none;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(26, 26, 26, 0.5);
+          box-shadow: 5px 5px 10px 0px rgba(26, 26, 26, 0.5);
 }
 
 .input:focus {
   border-width: 0;
-  border: 0;
-  outline: none;
+  border-color: #3c83f6;
 }
 
 .label {
