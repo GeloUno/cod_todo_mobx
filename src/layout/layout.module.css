@@ -17,8 +17,20 @@
 }
 
 .section {
-  max-width: 450px;
+  max-width: 420px;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  scrollbar-width: none;
+  padding: 15px;
+}
+
+.section::-webkit-scrollbar {
+  display: none;
+}
+
+.rightSection {
+  height: 80vh;
 }
 
 .body {
@@ -29,6 +41,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;

@@ -9,10 +9,10 @@ function Layout() {
   return (
     <div className={styles.container}>
       <div className={styles.body}>
-        <div className={styles.section}>
+        <div className={`${styles.section} ${styles.leftSection}`}>
           <ToDoDetailSwitch store={mystore} />
         </div>
-        <div className={styles.section}>
+        <div className={`${styles.section} ${styles.rightSection}`}>
           <InputToDo store={mystore} />
           <ToDolist store={mystore} isLoading={false} />
         </div>

@@ -9,12 +9,27 @@
 }
 
 .section{
-  max-width: 450px;
-  width: 100%;  
+  max-width: 420px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  scrollbar-width: none;
+  padding: 15px;
 }
+.section::-webkit-scrollbar{
+  display: none;
+}
+.leftSection{  
+
+}
+.rightSection{  
+  height: 80vh;
+}
+
 .body{
-  display: flex; 
+  display: flex;  
   flex-direction: row;
+  width: 100%;
   flex-wrap: wrap; 
   justify-content: space-around;  
 }
