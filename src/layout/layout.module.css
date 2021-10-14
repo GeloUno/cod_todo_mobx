@@ -29,8 +29,20 @@
   display: none;
 }
 
+@media (orientation: portrait) {
+  .leftSection {
+    height: 38vh;
+  }
+}
+
 .rightSection {
-  height: 80vh;
+  height: 90vh;
+}
+
+@media (orientation: portrait) {
+  .rightSection {
+    height: 48vh;
+  }
 }
 
 .body {
