@@ -1,4 +1,4 @@
-# React TypeScript mobX
+# React TypeScript MobX SaSS
 
 node 14.17.3
 
